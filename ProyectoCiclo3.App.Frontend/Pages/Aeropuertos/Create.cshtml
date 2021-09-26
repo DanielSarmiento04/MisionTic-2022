@@ -1,0 +1,46 @@
+@page
+@{
+}
+
+<div clas= "text-left">
+  <p>Indique los siguients campos:</p>
+</div>
+<div class="text-center">
+<form action=""> 
+  @*For request the information neccesary   *@
+  <form>
+    <div class="form-group row">
+      <label for="nombre" class="col-sm-2 col-form-label">Nombre: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="ciudad" class="col-sm-2 col-form-label">Ciudad: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ciudad" placeholder="Ciudad">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="pais" class="col-sm-2 col-form-label">Pais: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="pais" placeholder="Pais">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="cordx" class="col-sm-2 col-form-label">Cordenada X: </label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" id="cordx" placeholder="Cordx">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="cordY" class="col-sm-2 col-form-label">Cordenada y: </label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" id="cordy" placeholder="Cordy">
+      </div>
+    </div>
+  </form>
+  <hr/>
+  <button type="submit" class="btn btn-success">Enviar</button>
+</form>
+</div>

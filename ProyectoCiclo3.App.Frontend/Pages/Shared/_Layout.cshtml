@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - FlyEmirate</title>
-    <link rel="shortcut icon" href="https: //www.dafont.com/forum/attach/orig/1/1/117871.jpg">
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Emirates_logo.svg/245px-Emirates_logo.svg.png">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -26,18 +26,42 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="Pages/Avion/Create">Privacy</a>
                         </li>
-                        @* This is a block  that is used to show the information for each entity *@
+                        @* This is a block  that is used to show the information for each entity abouut Flight *@
                         <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Avion
                           </a>
                           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/Avion/Create">Crear</a></li>
-                            <li><a class="dropdown-item" href="/Avion/List">Listar</a></li>
+                            <li><a class="dropdown-item" href="/Aviones/Create">Crear</a></li>
+                            <li><a class="dropdown-item" href="/Aviones/List">Listar</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          </ul>
+                        </li>
+                        @* This is a block  that is used to show the information for each entity abouut Rutes *@
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Rutas
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/Rutas/Create">Crear</a></li>
+                            <li><a class="dropdown-item" href="/Rutas/List">Listar</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                           </ul>
                         </li>            
+                        @* This is a block  that is used to show the information for each entity abouut Flight *@
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Aeropuertos
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/Aeropuertos/Create">Crear</a></li>
+                            <li><a class="dropdown-item" href="/Aeropuertos/List">Listar</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
