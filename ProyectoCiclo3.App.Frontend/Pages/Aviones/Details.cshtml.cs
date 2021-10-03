@@ -12,6 +12,7 @@ namespace ProyectoCiclo3.App.Frontend.Pages
     public class DetailsAvionesModel : PageModel
     {
         private readonly RepositorioAviones RepositorioAviones;
+        [BindProperty]
         public Aviones Aviones {get;set;}
  
         public DetailsAvionesModel(RepositorioAviones RepositorioAviones)
@@ -21,8 +22,8 @@ namespace ProyectoCiclo3.App.Frontend.Pages
  
         public IActionResult OnGet(int AvionesId)
         {
-                Aviones = RepositorioAviones.GetAvionesWithId(AvionesId);
-                return Page();
+            Aviones = RepositorioAviones.GetAvionesWithId(AvionesId);
+            return Page();
         }
     }
 }

@@ -33,7 +33,7 @@ namespace ProyectoCiclo3.App.Frontend.Pages
             }
             if(Aviones.id > 0)
             {
-            Aviones = RepositorioAviones.Update(Aviones);
+                Aviones = RepositorioAviones.Update(Aviones);
             }
             return RedirectToPage("./List");;
         }
