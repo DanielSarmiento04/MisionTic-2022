@@ -1,10 +1,12 @@
 @page
-@* @model ProyectoCiclo3.App.Frontend.Pages.FormAvionesModel *@
-@{  
+@model ProyectoCiclo3.App.Frontend.Pages.FormAvionesModel
+@{ 
+  var Aviones = Model.Aviones; 
+@* this value is for take reference from a template in Model *@
 }
 @* @model ProyectoCiclo3.App.Frontend.Pages.FormAvionesModel *@
 @* POr lo general el de editar es el mimo que el de crear *@
-
+@* 
 <div class="text-center">
 <form action="">
   <label for="id" class="form-label">Id:</label>
@@ -22,24 +24,25 @@
   <hr/>  
   <button type="submit" class="btn btn-success">Enviar</button>
 </form>
-</div>
-@* 
+</div> *@
+
 
 <div class="text-center">
-<form method = "">
+  @* POST FOR TAKE INFORMATION AND SEND FOR OTHER PART *@
+<form method = "POST">
   <label for="id" class="form-label">Id:</label>
   <input type="number" class="form-control" id="id"  placeholder="Id" asp-for ="@Aviones.id">
   <label for="marca" class="form-label">Marca:</label>
-  <input type="text" class="form-control" id="marca" placeholder="Marca" asp-for="@Aviones.marca">
+  <input type="text" class="form-control" id="marca" placeholder="Marca" asp-for="@Aviones.marca" required>
   <label for="modelo" class="form-label">Modelo:</label>
-  <input type="number" class="form-control" id="modelo" laceholder="Modelo" asp-for ="@Aviones.modelo">
+  <input type="number" class="form-control" id="modelo" placeholder="Modelo" asp-for ="@Aviones.modelo" required>
   <label for="numero_asientos" class="form-label">Numero de Asientos:</label>
-  <input type="number" class="form-control" id="numero_asientos" placeholder="Numero de Asientos" asp-for ="@Aviones.numero_asientos">
+  <input type="number" class="form-control" id="numero_asientos" placeholder="Numero de Asientos" asp-for ="@Aviones.numero_asientos" required>
   <label for="numero_banos" class="form-label">Numero de baños:</label>
-  <input type="number" class="form-control" id="numero_banos" placeholder="numero_banos" asp-for ="@Aviones.numero_banos">
+  <input type="number" class="form-control" id="numero_banos" placeholder="numero_banos" asp-for ="@Aviones.numero_banos" required>
   <label for="capacidad_maxima" class="form-label">Capacidad Maxima:</label>
-  <input type="number" class="form-control" id="capacidad_maxima" placeholder="Capacidad Maxima" asp-for ="@Aviones.capacidad_maxima">
+  <input type="number" class="form-control" id="capacidad_maxima" placeholder="Capacidad Maxima" asp-for ="@Aviones.capacidad_maxima" required>
   <hr/>  
   <button type="submit" class="btn btn-success">Enviar</button>
 </form>
-</div> *@
+</div>

@@ -40,6 +40,25 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
         return Avion    ;
         }
 
+        // For create a flight
+        public Aviones Create(Aviones newAviones)
+        {
+           if(Aviones.Count > 0){
+            newAviones.id = Aviones.Max(r => r.id) +1; 
+            }else{
+               newAviones.id = 1; 
+            }
+           Aviones.Add(newAviones);
+           return newAviones;
+        }
+    
+        public Aviones Delete(int id)
+        {
+            var Avion = Aviones.SingleOrDefault(b => b.id == id);
+            Aviones.Remove(Avion);
+           return Avion;
+        }
+
     }
 
 }

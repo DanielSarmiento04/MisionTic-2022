@@ -4,7 +4,17 @@
 }
 
 <h1>Listado de Aviones</h1>
+
 <table class="table">
+    <tr>
+        <td>ID</td>
+        <td>MARCA</td>
+        <td>MODELO</td>
+        <td>NUMERO BAÑOS</td>
+        <td>ASIENTOS</td>
+        <td>AbAÑPS</td>
+        <td>cAPACIDADS</td>
+    </tr>
     @foreach (var Aviones in Model.Aviones)
     {
         <tr>
@@ -15,10 +25,14 @@
             <td>@Aviones.numero_banos</td>
             <td>@Aviones.capacidad_maxima</td>
             <td>
-              <a class="btn btn-info" asp-page="./Details" asp-route-AvionesId="@Aviones.id"><i class="fas fa-adjust"></i>Ver</a>
-              @* <a class="btn btn-info" href="#">Editar</a>  *@
-              <a class="btn btn-info" asp-page="./Edit" asp-route-AvionesId="@Aviones.id"><i class="fas fa-adjust"></i>Editar</a>  @*Aca habia cometido un error de sintaxis*@
-              <a class="btn btn-danger" href="#">Eliminar</a>
+                <a class="btn btn-info" asp-page="./Details" asp-route-AvionesId="@Aviones.id"><i class="fas fa-adjust"></i>Ver</a>
+                @* <a class="btn btn-info" href="#">Editar</a>  *@
+                <a class="btn btn-info" asp-page="./Edit" asp-route-AvionesId="@Aviones.id"><i class="fas fa-adjust"></i>Editar</a>  @*Aca habia cometido un error de sintaxis*@
+                @* <a class="btn btn-danger" href="#">Eliminar</a> *@
+                <form method="POST">
+                    <input type="number" class="d-none" id="id" asp-for="@Aviones.id">
+                    <button type="submit"class="btn btn-danger">Eliminar</button>
+                </form>
             </td>
         </tr>
     }
