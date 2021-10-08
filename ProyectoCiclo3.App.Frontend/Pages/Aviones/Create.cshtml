@@ -2,36 +2,59 @@
 @model ProyectoCiclo3.App.Frontend.Pages.FormAvionesModel
 @{ 
   var Aviones = Model.Aviones; 
-@* this value is for take reference from a template in Model *@
 }
-@* @model ProyectoCiclo3.App.Frontend.Pages.FormAvionesModel *@
-@* POr lo general el de editar es el mimo que el de crear *@
-@* 
-<div class="text-center">
-<form action="">
-  <label for="id" class="form-label">Id:</label>
-  <input type="number " class="form-control" id="id" name="id" placeholder="Id">
-  <label for="marca" class="form-label">Marca:</label>
-  <input type="text" class="form-control" id="marca" name="marca" placeholder="Marca">
-  <label for="modelo" class="form-label">Modelo:</label>
-  <input type="number" class="form-control" id="modelo" name="modelo" placeholder="Modelo">
-  <label for="numero_asientos" class="form-label">Numero de Asientos:</label>
-  <input type="number" class="form-control" id="numero_asientos" name="numero_asientos" placeholder="Numero de Asientos">
-  <label for="numero_banos" class="form-label">Numero de baños:</label>
-  <input type="number" class="form-control" id="modelo" name="modelo" placeholder="Modelo">
-  <label for="capacidad_maxima" class="form-label">Capacidad Maxima:</label>
-  <input type="number" class="form-control" id="capacidad_maxima" name="capacidad_maxima" placeholder="Capacidad Maxima">
-  <hr/>  
-  <button type="submit" class="btn btn-success">Enviar</button>
-</form>
-</div> *@
 
 
 <div class="text-center">
   @* POST FOR TAKE INFORMATION AND SEND FOR OTHER PART *@
-<form method = "POST">
-  <label for="id" class="form-label">Id:</label>
-  <input type="number" class="form-control" id="id"  placeholder="Id" asp-for ="@Aviones.id">
+  <form method = "POST">
+
+    @* <div class="form-group row">
+      <label for="id" class="col-sm-2 col-form-label">Id</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" id="id"  placeholder="Id" asp-for ="@Aviones.id">
+      </div>
+    </div> *@
+
+    <div class="form-group row">
+      <label for="marca" class="col-sm-2 col-form-label">Marca</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="marca" placeholder="Marca" asp-for="@Aviones.marca">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="modelo" class="col-sm-2 col-form-label">Modelo</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" id="modelo" placeholder="Modelo" asp-for ="@Aviones.modelo">
+      </div>
+    </div>
+    
+    <div class="form-group row">
+      <label for="numero_asientos" class="col-sm-2 col-form-label">Numero de Asientos:</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" id="numero_asientos"  placeholder="Numero de Asientos" asp-for ="@Aviones.numero_asientos">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="numero_banos" class="col-sm-2 col-form-label">Numero de Baños:</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" id="numero_banos"  placeholder="numero_banos" asp-for ="@Aviones.numero_banos">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="capacidad_maxima" class="col-sm-2 col-form-label">Capacidad Maxima:</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" id="capacidad_maxima" placeholder="Capacidad Maxima" asp-for ="@Aviones.capacidad_maxima">
+      </div>
+    </div>
+
+    <hr/>  
+    <button type="submit" class="btn btn-success">Enviar</button>
+  </form>
+@* <form method = "POST">
   <label for="marca" class="form-label">Marca:</label>
   <input type="text" class="form-control" id="marca" placeholder="Marca" asp-for="@Aviones.marca" required>
   <label for="modelo" class="form-label">Modelo:</label>
@@ -44,5 +67,5 @@
   <input type="number" class="form-control" id="capacidad_maxima" placeholder="Capacidad Maxima" asp-for ="@Aviones.capacidad_maxima" required>
   <hr/>  
   <button type="submit" class="btn btn-success">Enviar</button>
-</form>
+</form> *@
 </div>

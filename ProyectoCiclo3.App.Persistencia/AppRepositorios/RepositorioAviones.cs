@@ -5,6 +5,8 @@ using System;
  
 namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
 {
+
+
     public class RepositorioAviones
     {
         List<Aviones> Aviones;
@@ -27,18 +29,6 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
         {
             return Aviones.SingleOrDefault(b => b.id == id);
         }
-        
-        public Aviones Update(Aviones newAviones){
-            var Avion = Aviones.SingleOrDefault(b => b.id == newAviones.id);
-            if(Avion != null){
-                Avion.marca = newAviones.marca;
-                Avion.modelo = newAviones.modelo;
-                Avion.numero_asientos = newAviones.numero_asientos;
-                Avion.numero_banos = newAviones.numero_banos;
-                Avion.capacidad_maxima = newAviones.capacidad_maxima;
-            }
-        return Avion    ;
-        }
 
         // For create a flight
         public Aviones Create(Aviones newAviones)
@@ -51,14 +41,74 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
            Aviones.Add(newAviones);
            return newAviones;
         }
-    
         public Aviones Delete(int id)
         {
-            var Avion = Aviones.SingleOrDefault(b => b.id == id);
+            var Avion= Aviones.SingleOrDefault(b => b.id == id);
             Aviones.Remove(Avion);
-           return Avion;
+            return Avion;
         }
-
+        
+        public Aviones Update(Aviones newAviones){
+            var Avion = Aviones.SingleOrDefault(b => b.id == newAviones.id);
+            if(Avion != null){
+                Avion.marca = newAviones.marca;
+                Avion.modelo = newAviones.modelo;
+                Avion.numero_asientos = newAviones.numero_asientos;
+                Avion.numero_banos = newAviones.numero_banos;
+                Avion.capacidad_maxima = newAviones.capacidad_maxima;
+            }
+            return Avion    ;
+        }
     }
+    // public class RepositorioAviones
+    // {
+    //     List<Aviones> Aviones;
+    //     private readonly AppContext _appContext = new AppContext(); 
+ 
+    //     public IEnumerable<Aviones> GetAll()
+    //     {
+    //         return _appContext.Aviones;
+    //     }
+ 
+    //     public Aviones GetAvionesWithId(int id)
+    //     {
+    //         return _appContext.Aviones.Find(id);;
+    //     }
+        
+    //     public Aviones Update(Aviones newAviones){
+    //         var Avion = _appContext.Aviones.Find(newAviones.id);
+
+    //         if(Avion != null){
+    //             Avion.marca = newAviones.marca;
+    //             Avion.modelo = newAviones.modelo;
+    //             Avion.numero_asientos = newAviones.numero_asientos;
+    //             Avion.numero_banos = newAviones.numero_banos;
+    //             Avion.capacidad_maxima = newAviones.capacidad_maxima;
+    //             _appContext.SaveChanges();
+    //         }
+    //         return Avion    ;
+    //     }
+
+    //     // For create a flight
+    //     public Aviones Create(Aviones newAviones)
+    //     {
+    //         var addAviones = _appContext.Aviones.Add(newAviones);
+    //         _appContext.SaveChanges();
+    //         return addAviones.Entity;
+    //     }
+    
+    //     public void Delete(int id)
+    //     {
+    //         var Avion = _appContext.Aviones.Find(id);
+    //         if (Avion == null)
+    //             return;
+    //         _appContext.Aviones.Remove(Avion);
+    //         _appContext.SaveChanges();
+
+    //     }
+
+    // }
 
 }
+
+

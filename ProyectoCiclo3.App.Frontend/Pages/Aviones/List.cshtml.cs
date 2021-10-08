@@ -13,9 +13,9 @@ namespace ProyectoCiclo3.App.Frontend.Pages
     public class ListAvionesModel : PageModel
     {
         private readonly RepositorioAviones RepositorioAviones;
-        public IEnumerable <Aviones> Aviones { get; set;}
+        public IEnumerable <Aviones> LAviones { get; set;}
         [BindProperty]
-        public Aviones Avion { get; set;}
+        public Aviones Aviones { get; set;}
 
         public ListAvionesModel(RepositorioAviones RepositorioAviones) 
         {
@@ -24,14 +24,15 @@ namespace ProyectoCiclo3.App.Frontend.Pages
         
         public void OnGet()
         { // From Flight Repositoy  get the flight from Data Base
-            Aviones = RepositorioAviones.GetAll();
+            LAviones = RepositorioAviones.GetAll();
         }
         
         public IActionResult OnPost()
         {
-            if(Avion.id > 0)
+      
+            if(Aviones.id > 0)
             {
-               Avion = RepositorioAviones.Delete(Avion.id);
+                RepositorioAviones.Delete(Aviones.id);
             }
             return RedirectToPage("./List");
         }

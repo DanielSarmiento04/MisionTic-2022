@@ -12,10 +12,10 @@
         <td>MODELO</td>
         <td>NUMERO BAÑOS</td>
         <td>ASIENTOS</td>
-        <td>AbAÑPS</td>
-        <td>cAPACIDADS</td>
+        <td>BAÑOS</td>
+        <td>CAPACIDAD</td>
     </tr>
-    @foreach (var Aviones in Model.Aviones)
+    @foreach (var Aviones in Model.LAviones)
     {
         <tr>
             <td>@Aviones.id</td>
@@ -25,15 +25,19 @@
             <td>@Aviones.numero_banos</td>
             <td>@Aviones.capacidad_maxima</td>
             <td>
+
                 <a class="btn btn-info" asp-page="./Details" asp-route-AvionesId="@Aviones.id"><i class="fas fa-adjust"></i>Ver</a>
                 @* <a class="btn btn-info" href="#">Editar</a>  *@
                 <a class="btn btn-info" asp-page="./Edit" asp-route-AvionesId="@Aviones.id"><i class="fas fa-adjust"></i>Editar</a>  @*Aca habia cometido un error de sintaxis*@
                 @* <a class="btn btn-danger" href="#">Eliminar</a> *@
                 <form method="POST">
-                    <input type="number" class="d-none" id="id" asp-for="@Aviones.id">
+                    <input type="number" class="form-control d-none" id="id" asp-for="@Aviones.id">
                     <button type="submit"class="btn btn-danger">Eliminar</button>
                 </form>
+              
             </td>
         </tr>
     }
 </table>
+
+ <a class="btn btn-info" asp-page="./Create"><i class="fas fa-adjust"></i>Ir a crear</a>  @*Aca habia cometido un error de sintaxis*@
