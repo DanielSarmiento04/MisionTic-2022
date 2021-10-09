@@ -1,34 +1,37 @@
 @page
+@model ProyectoCiclo3.App.Frontend.Pages.ListRutasModel
 @{
 }
- 
-<table class="table table-hover">
-  <thead>
+<h1>Listado Rutas</h1>
+
+<table class="table">
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+        <td>ID</td>
+        <td>Nombre</td>
+        <td>Origen</td>
+        <td>tiempoEsperado</td>
+
     </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>Twitter</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>Facebook</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry the Bird</td>
-      <td>Arias</td>
-      <td>Instagram</td>
-    </tr>
-  </tbody>
+    @foreach (var Rutas in Model.LRutas)
+    {
+        <tr>
+            <td>@Rutas.id</td>
+            <td>@Rutas.nombre</td>
+            <td>@Rutas.origen</td>
+            <td>@Rutas.tiempoEsperado</td>
+            <td>
+                @* <a class="btn btn-info" asp-page="./Details" asp-route-RutasId="@Rutas.id"><i class="fas fa-adjust"></i>Ver</a> *@
+                @* <a class="btn btn-info" href="#">Editar</a>  *@
+                @* <a class="btn btn-info" asp-page="./Edit" asp-route-RutasId="@Rutas.id"><i class="fas fa-adjust"></i>Editar</a>  Aca habia cometido un error de sintaxis *@
+                @* <a class="btn btn-danger" href="#">Eliminar</a> *@
+                @* <form method="POST">
+                    <input type="number" class="form-control d-none" id="id" asp-for="@Rutas.id">
+                    <button type="submit"class="btn btn-danger">Eliminar</button>
+                </form> *@
+              
+            </td>
+        </tr>
+    }
 </table>
+
+ <a class="btn btn-info" asp-page="./Create"><i class="fas fa-adjust"></i>Ir a crear</a>  @*Aca habia cometido un error de sintaxis*@
