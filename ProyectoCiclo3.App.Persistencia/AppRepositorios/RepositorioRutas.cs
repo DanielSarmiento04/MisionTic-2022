@@ -6,7 +6,7 @@ using System;
 namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
 {
     public class RepositorioRutas
-    {
+    {   
         List<Rutas> Rutas;
  
         public RepositorioRutas()
