@@ -19,7 +19,14 @@
     <div class="form-group row">
       <label for="marca" class="col-sm-2 col-form-label">Marca</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="marca" placeholder="Marca" asp-for="@Aviones.marca">
+        <select asp-for="@Aviones.marca" class="form-control">
+            <option value="">Selecciones</option>
+            @foreach (var LRutas in Model.LRutas)
+          {
+            <option value="@LRutas.id">@LRutas.nombre</option>
+          }
+        </select> 
+        @* <input type="text" class="form-control" id="marca" placeholder="Marca" asp-for="@Aviones.marca"> *@
       </div>
     </div>
 

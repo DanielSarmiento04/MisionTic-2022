@@ -12,12 +12,21 @@ namespace ProyectoCiclo3.App.Frontend.Pages
     public class FormAvionesModel : PageModel
     {
         private readonly RepositorioAviones RepositorioAviones;
+        private readonly RepositorioRutas RepositorioRutas;
+        public IEnumerable<Aviones> LAviones {get;set;}
+        public IEnumerable<Rutas> LRutas {get;set;}
+        // la ultima 
         [BindProperty]
         public Aviones Aviones {get;set;}
         // Constructor
-        public FormAvionesModel(RepositorioAviones RepositorioAviones)
+        public FormAvionesModel(RepositorioAviones RepositorioAviones,RepositorioRutas RepositorioRutas)
         {
             this.RepositorioAviones = RepositorioAviones;
+            this.RepositorioRutas = RepositorioRutas;
+        }
+
+        public void OnGet(){
+            LRutas = RepositorioRutas.GetAll();
         }
 
         public IActionResult OnPost()

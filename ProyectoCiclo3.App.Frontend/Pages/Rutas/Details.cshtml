@@ -1,0 +1,23 @@
+@page
+@model ProyectoCiclo3.App.Frontend.Pages.DetailsRutasModel
+@{
+    var Rutas = Model.Rutas;
+}
+<head>
+    @* <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FlyEmirate</title>
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Emirates_logo.svg/245px-Emirates_logo.svg.png">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" /> *@
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</head>
+<body>
+<ol class="list-group list-group-numbered">
+  <li class="list-group-item"> <b>id: </b> @Rutas.id</li>
+  <li class="list-group-item"> <b>Marca: </b> @Rutas.nombre</li>
+  <li class="list-group-item"> <b>Modelo: </b> @Rutas.origen</li>
+  <li class="list-group-item"><b>Numero asientos </b> @Rutas.tiempoEsperado</li>
+</ol>    
+</body> 

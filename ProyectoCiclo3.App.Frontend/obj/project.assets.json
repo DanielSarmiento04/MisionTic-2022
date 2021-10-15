@@ -8977,11 +8977,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Yolanda\\Desktop\\ProyectoCiclo3.App\\ProyectoCiclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj",
+      "projectUniqueName": "C:\\Users\\Yolanda\\Desktop\\ProyectoCiclo3.App\\Proyectociclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj",
       "projectName": "ProyectoCiclo3.App.Frontend",
-      "projectPath": "C:\\Users\\Yolanda\\Desktop\\ProyectoCiclo3.App\\ProyectoCiclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj",
+      "projectPath": "C:\\Users\\Yolanda\\Desktop\\ProyectoCiclo3.App\\Proyectociclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj",
       "packagesPath": "C:\\Users\\Yolanda\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Yolanda\\Desktop\\ProyectoCiclo3.App\\ProyectoCiclo3.App.Frontend\\obj\\",
+      "outputPath": "C:\\Users\\Yolanda\\Desktop\\ProyectoCiclo3.App\\Proyectociclo3.App.Frontend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Yolanda\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -9064,7 +9064,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.413\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.414\\RuntimeIdentifierGraph.json"
       }
     }
   }
