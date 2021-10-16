@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RQz0tTc0LbAhvszIDbaCHrH95q6Spm4d2MSBXg7Rye/6g4qj5J1X5ydLs24JTqgRLbH8z7zTL25/Q9oImMijFA==",
+  "dgSpecHash": "JtCdSt5Rh2eb/I9v3n5B/6LPcdXQf/2b+mIYfAF6h/1rkPrbeGH1YLKbxrcCBgqncyfK8PyZ83niR8vew/HI6g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Yolanda\\Desktop\\ProyectoCiclo3.App\\Proyectociclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj",
+  "projectFilePath": "C:\\Users\\Yolanda\\Desktop\\ProyectoCiclo3.App\\ProyectoCiclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Yolanda\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Yolanda\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.3\\microsoft.aspnetcore.cryptography.internal.3.1.3.nupkg.sha512",

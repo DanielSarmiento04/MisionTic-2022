@@ -8,50 +8,42 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
     public class RepositorioRutas
     {   
         List<Rutas> Rutas;
- 
-        public RepositorioRutas()
-        {
-            Rutas = new List<Rutas>()
-            {
-                new Rutas {id = 1, nombre = "MFG234", origen = "e", tiempoEsperado = "8"},
-                new Rutas {id = 2, nombre = "Airbus", origen = "e", tiempoEsperado = "8"}
-            };
-        }
+        private readonly AppContext _appContext = new AppContext(); 
+
  
         public IEnumerable<Rutas> GetAll()
         {
-            return Rutas;
+            return _appContext.Rutas;
         }
  
         public Rutas GetRutasWithId(int id)
         {
-            return Rutas.SingleOrDefault(b => b.id == id);
+            return _appContext.Rutas.Find(id);
         }
         
         public Rutas Create(Rutas newRutas)
         {
-           if(Rutas.Count > 0){
-            newRutas.id = Rutas.Max(r => r.id) +1; 
-            }else{
-               newRutas.id = 1; 
-            }
-           Rutas.Add(newRutas);
-           return newRutas;
+            var addRutas = _appContext.Rutas.Add(newRutas);
+            _appContext.SaveChanges();
+            return addRutas.Entity;
         }
 
-        public Rutas Delete(int id)
+        public void Delete(int id)
         {
-            var Ruta= Rutas.SingleOrDefault(b => b.id == id);
-            Rutas.Remove(Ruta);
-            return Ruta;
+            var Ruta = _appContext.Rutas.Find(id);
+            if(Ruta ==null) return;
+            _appContext.Rutas.Remove(Ruta);
+            _appContext.SaveChanges();
         }
         
         public Rutas Update(Rutas newRutas){
-            var Ruta = Rutas.SingleOrDefault(b => b.id == newRutas.id);
+            var Ruta = _appContext.Rutas.Find(newRutas.id);
+
             if(Ruta != null){
                 Ruta.nombre = newRutas.nombre;
                 Ruta.origen = newRutas.origen;
                 Ruta.tiempoEsperado = newRutas.tiempoEsperado;
+                _appContext.SaveChanges();
             }
             return Ruta    ;
         }

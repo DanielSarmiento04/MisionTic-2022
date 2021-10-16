@@ -10,10 +10,10 @@
         <td>ID</td>
         <td>MARCA</td>
         <td>MODELO</td>
-        <td>NUMERO BAÑOS</td>
-        <td>ASIENTOS</td>
+        <td>Numeros ASIENTOS</td>
         <td>BAÑOS</td>
-        <td>CAPACIDAD</td>
+        <td>CAPACIDAD maxima</td>
+        <td>Opciones</td>
     </tr>
     @foreach (var Aviones in Model.LAviones)
     {
@@ -25,15 +25,16 @@
             <td>@Aviones.numero_banos</td>
             <td>@Aviones.capacidad_maxima</td>
             <td>
-
                 <a class="btn btn-info" asp-page="./Details" asp-route-AvionesId="@Aviones.id"><i class="fas fa-adjust"></i>Ver</a>
-                @* <a class="btn btn-info" href="#">Editar</a>  *@
-                <a class="btn btn-info" asp-page="./Edit" asp-route-AvionesId="@Aviones.id"><i class="fas fa-adjust"></i>Editar</a>  @*Aca habia cometido un error de sintaxis*@
-                @* <a class="btn btn-danger" href="#">Eliminar</a> *@
-                <form method="POST">
-                    <input type="number" class="form-control d-none" id="id" asp-for="@Aviones.id">
-                    <button type="submit"class="btn btn-danger">Eliminar</button>
-                </form>
+                <a class="btn btn-info" asp-page="./Edit" asp-route-AvionesId="@Aviones.id"><i class="fas fa-adjust"></i>Editar</a>
+                <td>
+                    <form method="POST">
+                        
+                        <input type="number" class="form-control d-none" id="id" asp-for="@Aviones.id">
+                        <button type="submit"class="btn btn-danger">Eliminar</button>
+                    </form>   
+
+                </td>                     
               
             </td>
         </tr>

@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Yolanda\\Desktop\\ProyectoCiclo3.App\\Proyectociclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj": {}
+    "C:\\Users\\Yolanda\\Desktop\\ProyectoCiclo3.App\\ProyectoCiclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj": {}
   },
   "projects": {
     "C:\\Users\\Yolanda\\Desktop\\ProyectoCiclo3.App\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj": {
@@ -54,14 +54,14 @@
         }
       }
     },
-    "C:\\Users\\Yolanda\\Desktop\\ProyectoCiclo3.App\\Proyectociclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj": {
+    "C:\\Users\\Yolanda\\Desktop\\ProyectoCiclo3.App\\ProyectoCiclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Yolanda\\Desktop\\ProyectoCiclo3.App\\Proyectociclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj",
+        "projectUniqueName": "C:\\Users\\Yolanda\\Desktop\\ProyectoCiclo3.App\\ProyectoCiclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj",
         "projectName": "ProyectoCiclo3.App.Frontend",
-        "projectPath": "C:\\Users\\Yolanda\\Desktop\\ProyectoCiclo3.App\\Proyectociclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj",
+        "projectPath": "C:\\Users\\Yolanda\\Desktop\\ProyectoCiclo3.App\\ProyectoCiclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj",
         "packagesPath": "C:\\Users\\Yolanda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Yolanda\\Desktop\\ProyectoCiclo3.App\\Proyectociclo3.App.Frontend\\obj\\",
+        "outputPath": "C:\\Users\\Yolanda\\Desktop\\ProyectoCiclo3.App\\ProyectoCiclo3.App.Frontend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Yolanda\\AppData\\Roaming\\NuGet\\NuGet.Config"

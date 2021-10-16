@@ -2,6 +2,13 @@
 @model ProyectoCiclo3.App.Frontend.Pages.ListRutasModel
 @{
 }
+
+<styles>
+
+</styles>
+
+
+
 <h1>Listado Rutas</h1>
 
 <table class="table">
@@ -10,6 +17,7 @@
         <td>Nombre</td>
         <td>Origen</td>
         <td>tiempoEsperado</td>
+        <td>Opciones</td>
 
     </tr>
     @foreach (var Rutas in Model.LRutas)
@@ -21,13 +29,13 @@
             <td>@Rutas.tiempoEsperado</td>
             <td>
                 <a class="btn btn-info" asp-page="./Details" asp-route-RutasId="@Rutas.id"><i class="fas fa-adjust"></i>Ver</a>
-                @* <a class="btn btn-info" href="#">Editar</a>  *@
-                <a class="btn btn-info" asp-page="./Edit" asp-route-RutasId="@Rutas.id"><i class="fas fa-adjust"></i>Editar</a>  Aca habia cometido un error de sintaxis
-                @* <a class="btn btn-danger" href="#">Eliminar</a> *@
-                <form method="POST">
-                    <input type="number" class="form-control d-none" id="id" asp-for="@Rutas.id">
-                    <button type="submit"class="btn btn-danger">Eliminar</button>
-                </form>             
+                <a class="btn btn-info" asp-page="./Edit" asp-route-RutasId="@Rutas.id"><i class="fas fa-adjust"></i>Editar</a>
+                <td>
+                    <form method="POST">
+                        <input type="number" class="form-control d-none" id="id" asp-for="@Rutas.id">
+                        <button type="submit"class="btn btn-danger">Eliminar</button>
+                    </form>   
+                </td>                          
             </td>
         </tr>
     }
